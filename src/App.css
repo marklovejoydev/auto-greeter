@@ -1,16 +1,26 @@
 body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 33%, 33%, 33%;
+  grid-template-rows: auto;
+  height: 100vh;
+  /* justify-content: center;
+  align-items: center; */
+  border: 2px solid violet;
 }
 
 .app {
+  
+  grid-column-start: 2;
+  grid-column-end: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  /* position: relative; */
+  /* scale: 2; */
+  margin-left:1rem;
+  margin-right: 1rem;
+  border: 2px solid black;
 }
 
 .header{
@@ -22,19 +32,32 @@ body{
 }
 
 .namechanger {
-  display: flexbox;
-  flex-direction: row;
-  border: 2px solid orange
+  display: grid;
+  grid-template-rows:auto, auto, auto;
+  border: 2px solid orange;
+  margin-bottom: 1rem;
 }
 
 .label {
-flex:auto
+grid-row-start: 1;
+grid-row-end: 2;
+
+justify-content: center;
+text-align: center;
+
 }
 
 #nameInput {
-flex:auto;
+grid-row-start: 2;
+grid-row-end: 3;
+justify-content: center;
+align-self: center;
 }
 
 .button {
-flex:auto;
+grid-row-start: 3;
+grid-row-end: 4;
+justify-content: center;
+align-items: center;
+margin: 1rem;
 }
